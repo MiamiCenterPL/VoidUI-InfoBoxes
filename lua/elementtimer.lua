@@ -46,6 +46,9 @@ if RequiredScript == "core/lib/managers/mission/coreelementtimer" then
 	local filter_names_table = {
 		--[[
 		]]
+		["friend"] = {
+			["102813"] = "Breaching"
+		},
 		["born"] = {
 			["101033"] = "Assemble"
 		},

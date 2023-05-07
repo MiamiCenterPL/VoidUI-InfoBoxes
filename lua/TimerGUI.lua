@@ -7,7 +7,7 @@ Hooks:PostHook(TimerGui, 'init', 'init_hud_timer', function(self, ...)
 	    votingmachine2 = "Hack", hack_suburbia = "Hack", hold_hack_comp = "Hack", hack_suburbia_axis = "Hack",
 		hack_suburbia_outline = "Hack", hold_hack_server_room = "Hack", hack_ipad = "Hack", mcm_laptop = "Hack",
 		tag_laptop = "Hack", hack_suburbia_jammed_y = "Hack", hold_new_hack = "Hack", chca_start_hacking = "Hack",
-		are_laptop = "Hack", hack_trai_outline = "Hack", corp_hack_email = "Hack",
+		are_laptop = "Hack", hack_trai_outline = "Hack", corp_hack_email = "Hack", cas_copy_usb = "Hack",
 	    hold_download_keys = "Download", uload_database = "Upload", corp_download_email = "Download",
 	    hold_analyze_evidence = "Analyze",
 	    upload_database = "Upload",
