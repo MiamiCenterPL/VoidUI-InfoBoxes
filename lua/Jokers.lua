@@ -19,12 +19,7 @@ local function _add_joker_infobox(unit, peer_unit)
 				if infobox then
 					local joker = Jokermon.jokers[unit:base()._jokermon_key]
 					joker_name = joker and joker.name or managers.localization:text("VoidUI_IB_joker")
-					local panel = infobox.name_id_panel
-					panel:set_text(joker_name)
-					font_size = 38 * VoidUI.options.hud_assault_scale / 4
-					panel:set_font_size(font_size)
-					local _,_,w,h = panel:text_rect()
-					panel:set_font_size(math.clamp(font_size * (panel:h() / h), 8, font_size))
+					infobox:rename_joker(joker_name)
 					infobox:set_value(joker and joker.kills + joker.special_kills or 0)
 					infobox:update_info(unit:character_damage():health_ratio(), joker and joker:get_exp_ratio() or 0)
 					

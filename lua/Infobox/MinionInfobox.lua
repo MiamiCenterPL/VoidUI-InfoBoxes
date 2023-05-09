@@ -175,6 +175,13 @@ function MinionInfobox:create(data)
     end
 end
 
+function MinionInfobox:rename_joker(name)
+    local scale, panel_w, panel_h = self:get_scale_options()
+    local font_size = panel_h / 3
+    self._name_panel:set_text(name)
+    self:FixFont(self._name_panel, font_size)
+end
+
 function MinionInfobox:_set_value(kills)
     if not kills then
         self.value = tonumber(self.value) + 1
