@@ -18,7 +18,7 @@ if VoidUI_IB.options.lootbags_infobox or VoidUI_IB.options.collectables or VoidU
 		"stapler", "chavez_key", "server", "ranc_hammer", "ranc_mould", "ranc_sheriff_star", "audio_device", "c4", "ranc_acid",
 		"laptop", "ranc_silver_ingot", "tape", "fingerprint", "flammable_liquid", "blood_sample", "blood_sample_verified", "plates",
 		"barcode_opa_locka", "barcode_edgewater", "barcode_isles_beach", "barcode_downtown", "barcode_brickell", "c4_x1",
-		"lance_part", "chas_keychain_forklift", "laxative", "defibrillator_paddles", "notepad", "adrenaline", "documents",
+		"lance_part", "chas_keychain_forklift", "laxative", "defibrillator_paddles", "notepad", "adrenaline", "documents", "files",
 		"business_card", "hand", "c4_stackable", "evidence", "pex_loaded_card", "pex_unloaded_card", "pex_loaded_card_lvl_2",
 		"pex_cutter", "police_uniform", "circle_cutter", "medallion", "chimichanga", "liquid_nitrogen", "c4_x3", "president_key", "cas_bfd_tool"}
 		self.skipped_lootbags_id = {"turret_part"}

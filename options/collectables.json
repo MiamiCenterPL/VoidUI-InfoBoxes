@@ -33,7 +33,6 @@
 		{
 			"type": "multiple_choice",
 			"id": "hud_Collectable",
-			"parent": "enable_assault",
 			"callback": "refresh_infoboxes",
 			"title": "VoidUI_IB_Position_hud_title",
 			"description": "VoidUI_IB_Position_hud_desc",

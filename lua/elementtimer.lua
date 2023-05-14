@@ -12,7 +12,7 @@ if RequiredScript == "core/lib/managers/mission/coreelementtimer" then
 		["crojob3"] = {"103449", "101577", "101708", "104399", "101099"},
 		["mia_2"] = {"130321", "131424", "136321"},
 		["chas"] = {"138531", "138831", "139731", "140031", "139431"},
-		["des"] = {"136531", "159611"},
+		["des"] = {"136531", "159611", "133067"},
 		["big"] = {"105990", "105997", "105993", "106006"},
 		["dah"] = {"105076", "105083", "145903"},
 		["rvd2"] = {"102137"},
@@ -22,7 +22,7 @@ if RequiredScript == "core/lib/managers/mission/coreelementtimer" then
 		["shoutout_raid"] = {"132878"},
 		["sand"] = {"139108", "103662"},
 		["chca"] = {"101362", "150638", "151518", "152025", "151982"},
-		["mex"] = {"101721", "196753"},
+		["mex"] = {"101721", "196753", "151453", "199503"},
 		["fex"] = {"146490"},
 		["bex"] = {"101816"},
 		["watchdogs_2"] = {"103729", "101128"},
@@ -85,7 +85,9 @@ if RequiredScript == "core/lib/managers/mission/coreelementtimer" then
 		["kenaz"] = {
 			["167670"] = "BFD",
 			["167717"] = "Water",
-			["167718"] = "Water"
+			["167718"] = "Water",
+			["159652"] = "Hack",
+			["167740"] = "BFD"
 		},
 		["peta2"] = {
 			["101717"] = "Bridge"
@@ -177,7 +179,8 @@ if RequiredScript == "core/lib/managers/mission/coreelementtimer" then
 		},
 		["mex"] = {
 			["102677"] = "Fuel",
-			["156867"] = "Time_lock"
+			["156867"] = "Time_lock",
+			["137983"] = "Timer"
 		},
 		["des"] = {
 			["101687"] = "Crane"
@@ -237,6 +240,10 @@ if RequiredScript == "core/lib/managers/mission/coreelementtimer" then
 		["glace"] = {
 			["102333"] = "Plane",
 			["100732"] = "Plane"
+		},
+		["rat"] = {
+			["102230"] = "RatVanFlee",
+			["102178"] = "Helicopter"
 		}
 	}
 
