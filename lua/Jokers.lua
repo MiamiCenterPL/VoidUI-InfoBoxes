@@ -13,7 +13,7 @@ local function _add_joker_infobox(unit, peer_unit)
 		local unit_data = unit.unit_data and unit:unit_data()
 		local color_id = managers.criminals:character_color_id_by_unit(player_unit)
 		if unit_data then
-			local infobox = MinionInfobox:new({id = "joker_"..unit:id(), color_id = color_id})
+			local infobox = MinionInfobox:new({id = "joker_"..unit:id(), color_id = color_id, unit = unit})
 			if _G.Jokermon then
 				local joker_name
 				if infobox then

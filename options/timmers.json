@@ -31,8 +31,25 @@
 			"default_value" : 5
 		},
 		{
+			"type" : "toggle",
+			"id" : "FloatingETimerBoxes",
+			"title" : "VoidUI_IB_FloatingETimerBoxes_title",
+			"description" : "VoidUI_IB_FloatingETimerBoxes_desc",
+			"callback": "refresh_infoboxes",
+			"default_value" : false
+		},
+		{
+			"type" : "toggle",
+			"id" : "FloatingUTimerBoxes",
+			"title" : "VoidUI_IB_FloatingUTimerBoxes_title",
+			"description" : "VoidUI_IB_FloatingUTimerBoxes_desc",
+			"callback": "refresh_infoboxes",
+			"default_value" : true
+		},
+		{
 			"type": "multiple_choice",
 			"id": "hud_Timer",
+			"parent": "timers",
 			"title": "VoidUI_IB_Position_hud_title",
 			"description": "VoidUI_IB_Position_hud_desc",
 			"callback": "refresh_infoboxes",
@@ -70,6 +87,15 @@
 			"title" : "VoidUI_IB_ReverseAnimation_title",
 			"description" : "VoidUI_IB_ReverseAnimation_desc",
 			"default_value" : false
+		},
+		{
+			"type" : "toggle",
+			"id" : "timer_Pager",
+			"parent" : "timers",
+			"title" : "VoidUI_IB_timer_Pager_title",
+			"description" : "VoidUI_IB_timer_Pager_desc",
+			"callback": "refresh_infoboxes",
+			"default_value" : true
 		},
 		{
 			"type" : "toggle",

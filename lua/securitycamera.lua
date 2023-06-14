@@ -6,7 +6,8 @@ if VoidUI_IB.options.timer_Tape_loop then
             name = "Tape_loop",
             time = tape_loop_t,
             operation = "set_time",
-            manual_remove = true
+            manual_remove = true,
+            pos = VoidUI_IB.options.FloatingUTimerBoxes and self._unit:position() or nil
         }
         if not TimerInfobox:child("cu_loop_"..self._unit:id()) then
             managers.hud._hud_assault_corner:add_custom_timer(data)
@@ -22,7 +23,8 @@ if VoidUI_IB.options.timer_Tape_loop then
             id = "loop_"..self._unit:id(),
             name = "Tape_loop",
             time = restart_t,
-            operation = "set_time"
+            operation = "set_time",
+            pos = self._unit:position()
         }
         managers.hud._hud_assault_corner:add_custom_time(data)
         if TimerInfobox:child("cu_loop_"..self._unit:id()) then

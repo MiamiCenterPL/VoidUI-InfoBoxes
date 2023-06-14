@@ -31,8 +31,17 @@
 			"callback": "refresh_infoboxes"
 		},
 		{
+			"type": "toggle",
+			"id": "FloatingSentryBoxes",
+			"title": "VoidUI_IB_FloatingSentryBoxes_title",
+			"description": "VoidUI_IB_FloatingSentryBoxes_desc",
+			"default_value": true,
+			"callback": "refresh_infoboxes"
+		},
+		{
 			"type": "multiple_choice",
 			"id": "hud_Sentry",
+			"parent" : "sentry_infobox",
 			"title": "VoidUI_IB_Position_hud_title",
 			"description": "VoidUI_IB_Position_hud_desc",
 			"items": [

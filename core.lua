@@ -56,6 +56,7 @@ VoidUI_IB.get_texture_by_name = {
 		["gagepacks"] = {texture = "guis/textures/pd2/skilltree/icons_atlas", texture_rect = {3,515,64,64}},
 		["Camera"] = {texture = "guis/dlcs/big_bank/textures/pd2/pre_planning/preplan_icon_types", texture_rect = VoidUI_IB:get_texture_rect(48,1,1)},
 		--Timers
+		["Pager"] = {texture = "guis/textures/pd2/specialization/icons_atlas", texture_rect = VoidUI_IB:get_texture_rect(64,2,5)},
 		["Drill"] = {texture = "guis/textures/pd2/skilltree/icons_atlas", texture_rect = {320,320,64,64}},
 		["Hack"] = {texture = "guis/textures/pd2/pd2_waypoints", texture_rect = VoidUI_IB:get_texture_rect(32,3,2)},
 		["Timer"] = {texture = "guis/textures/pd2/skilltree/drillgui_icon_faster"},

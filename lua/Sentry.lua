@@ -37,7 +37,8 @@ elseif RequiredScript == "lib/units/equipment/sentry_gun/sentrygunequipment" the
 			color_id = self._unit:base():get_owner_id(), 
 			ap_rounds = self._unit:weapon():get_fire_mode(), 
 			ammo_ratio = self._unit:weapon():ammo_ratio(),
-			health_ratio = self._unit:character_damage():health_ratio()
+			health_ratio = self._unit:character_damage():health_ratio(),
+			pos = self._unit:position()
 		})
 	end
 	function SentryGunEquipment:VoidUI_IB_update_sentry()

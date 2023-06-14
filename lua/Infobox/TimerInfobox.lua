@@ -26,6 +26,16 @@ function TimerInfobox:FetchInfo(data)
     if self.string_id == "Unknown" and VoidUI_IB.options.PrintUnknownTimers and not VoidUI_IB.options.debug_show_timer_id then
         self:DebugPrint("Unknown timer, please report this to VoidUIInfoboxes dev".."\nID: "..tostring(data.id)..(data.editor_name and "\nName: "..tostring(data.editor_name) or "").."\nLevelID: "..tostring(Global.game_settings.level_id)..(data.instance_name and "\nInstanceName: "..tostring(data.instance_name) or ""))
     end
+
+    if data.pos then
+        self.is_floating_panel = true
+        self.pos = data.pos
+        self._radius = 300
+    end
+    if data.unit then
+        self.is_floating_panel = true
+        self.mov_unit = data.unit
+    end
 end
 
 function TimerInfobox:check_valid()

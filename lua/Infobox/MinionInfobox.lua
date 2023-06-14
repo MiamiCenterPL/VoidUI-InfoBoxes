@@ -50,6 +50,12 @@ function MinionInfobox:FetchInfo(data)
         end
     end
     self._nearly_dead = false
+    
+    if VoidUI_IB.options.FloatingJokerBoxes then
+        self.is_floating_panel = true
+        self.mov_unit = data.unit
+        self.radius = 320
+    end
 end
 
 function MinionInfobox:check_valid()
@@ -75,7 +81,7 @@ function MinionInfobox:create(data)
     if VoidUI_IB.options.jokers_kills then
         self._text_panel = self:new_text("x0", "bottom", "center", "center")
         self._text_panel:set_color(self.crim_color)
-        self._text_panel:set_font_size(panel_h / 3)
+        self._text_panel:set_font_size(panel_h / 4)
     end
     if VoidUI_IB.options.joker_health_type == 2 then
         self._health_bar, self._health_bar_bg = self:new_bar(self.health_align)
@@ -85,17 +91,24 @@ function MinionInfobox:create(data)
         self._health_bar_bg:set_bottom(self._background:bottom())
     elseif VoidUI_IB.options.joker_health_type == 1 then
         self._health_value = self:new_text("100%", "bottom", self.health_align, self.health_align)
+        self._health_value:set_color(self.crim_color)
+        self._health_value:set_font_size(panel_h / 4)
         local _,_,_,h = self._health_value:text_rect()
-        self._health_value:set_h(h * 0.8)
-        self._health_value:set_bottom(self._background:top())
+        self._health_value:set_h(h)
+        self._health_value:set_w(panel_w / 1.2)
+        self._health_value:set_center(self._background:center())
+        self._health_value:set_bottom(self._background:bottom())
     end
     if Jokermon then
         if VoidUI_IB.options.joker_xp_type == 1 then
             self._xp_value = self:new_text("0%", "bottom", self.xp_align, self.xp_align)
             self._xp_value:set_color(Color("80dfff"))
+            self._xp_value:set_font_size(panel_h / 4)
             local _,_,_,h = self._xp_value:text_rect()
-            self._xp_value:set_h(h * 0.8)
-            self._xp_value:set_bottom(self._background:top())
+            self._xp_value:set_h(h)
+            self._xp_value:set_w(panel_w / 1.2)
+            self._xp_value:set_center(self._background:center())
+            self._xp_value:set_bottom(self._background:bottom())
         elseif VoidUI_IB.options.joker_xp_type == 2 then
             self._xp_bar, self._xp_bar_bg = self:new_bar(self.xp_align)
             self._xp_bar:set_center(self._background:center() - panel_w / 20)
@@ -139,7 +152,7 @@ function MinionInfobox:create(data)
                 end
             end
         elseif self._xp_value then
-            self._health_value:set_bottom(self._background:bottom() - panel_h / 40)
+            self._health_value:set_bottom(self._background:bottom() - panel_h / 60)
             if self.health_align == self.xp_align then
                 self._xp_value:set_bottom(self._health_value:top())
                 if self._text_panel and self.health_align == "center" then
@@ -148,7 +161,7 @@ function MinionInfobox:create(data)
                     self._text_panel:set_bottom(self._background:bottom() - panel_h / 40)
                 end
             else
-                self._xp_value:set_bottom(self._background:bottom() - panel_h / 40)
+                self._xp_value:set_bottom(self._background:bottom() - panel_h / 60)
                 if self._text_panel then
                     if self.health_align == "center" then
                         self._text_panel:set_bottom(self._health_value:top())

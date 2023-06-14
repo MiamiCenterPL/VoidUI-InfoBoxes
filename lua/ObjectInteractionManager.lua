@@ -20,7 +20,8 @@ if VoidUI_IB.options.lootbags_infobox or VoidUI_IB.options.collectables or VoidU
 		"barcode_opa_locka", "barcode_edgewater", "barcode_isles_beach", "barcode_downtown", "barcode_brickell", "c4_x1",
 		"lance_part", "chas_keychain_forklift", "laxative", "defibrillator_paddles", "notepad", "adrenaline", "documents", "files",
 		"business_card", "hand", "c4_stackable", "evidence", "pex_loaded_card", "pex_unloaded_card", "pex_loaded_card_lvl_2",
-		"pex_cutter", "police_uniform", "circle_cutter", "medallion", "chimichanga", "liquid_nitrogen", "c4_x3", "president_key", "cas_bfd_tool"}
+		"pex_cutter", "police_uniform", "circle_cutter", "medallion", "chimichanga", "liquid_nitrogen", "c4_x3", "president_key", "cas_bfd_tool",
+		"fire_extinguisher", "bridge", "ticket"}
 		self.skipped_lootbags_id = {"turret_part"}
 		self._loot_bags = {}
 		self.loot_collectables = {}
@@ -54,7 +55,7 @@ if VoidUI_IB.options.lootbags_infobox or VoidUI_IB.options.collectables or VoidU
 			diamondheist_vault_diamond = "Jewellery", vault_loot_jewels = "Jewellery", vault_loot_ring = "Jewellery",
 			diamondheist_big_diamond = "Jewellery", diamondheist_vault_bust = "Jewellery", vault_loot_diamond_chest = "Jewellery",
 			vault_loot_diamond_collection = "Jewellery", vault_loot_trophy = "Gold", vault_loot_chest = "Jewellery",
-			money_bundle = "Money", vault_loot_banknotes = "Money", vault_loot_cash = "Money", ring_band = "Jewellery", spawn_bucket_of_money = "Gold", gen_atm = "Money",
+			money_bundle = "Money", vault_loot_banknotes = "Money", vault_loot_cash = "Money", ring_band = "Jewellery", spawn_bucket_of_money = "Gold", gen_atm = "Money", vault_loot_silver = "Jewellery",
 			vault_loot_gold = "Gold", vault_loot_coins = "Money", equipment_mayan_gold = "Gold", gold_bag_equip = "Gold",
 			bank_manager_key = "Keycard", help_keycard = "Keycard", planks = "Planks", boards = "Planks", crowbar = "Crowbar",
 			hydrogen_chloride = "HydrogenChloride", caustic_soda = "CausticSoda", acid = "MuriaticAcid",

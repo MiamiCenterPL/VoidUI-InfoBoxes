@@ -40,7 +40,7 @@ Hooks:PostHook(TimerGui, '_start', 'add_new_timer', function(self, ...)
 	    	self._name = "Timer"
 	    end
 		TimerInfobox:new({
-			id = "timer_"..self._unit:id(), name = self._name, time = self._current_timer, type = "Timer", editor_name = editor_name and "U_"..editor_name or nil
+			id = "timer_"..self._unit:id(), name = self._name, time = self._current_timer, type = "Timer", editor_name = editor_name and "U_"..editor_name or nil, pos = VoidUI_IB.options.FloatingUTimerBoxes and self._unit:position() or nil
 		})
 		self._created = true
     end

@@ -1,5 +1,5 @@
 <mod name="VoidUI InfoBoxes" author="MiamiCenter">
-	<AssetUpdates id="36208" version="1.44.2" provider="modworkshop" install_directory="mods/" version_is_number="false"/>
+	<AssetUpdates id="36208" version="1.45" provider="modworkshop" install_directory="mods/" version_is_number="false"/>
 	<AssetUpdates id="MiamiCenterPL/VoidUI-InfoBoxes" provider="github" branch="main" custom_name="GitHub Update"/>
 	<Dependencies>
 		<Dependency name="Void UI"/>

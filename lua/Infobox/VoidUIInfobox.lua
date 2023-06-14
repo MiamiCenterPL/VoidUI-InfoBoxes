@@ -143,6 +143,15 @@ function VoidUIInfobox:get_hud(box_type) --Ready
     local hud
     local hud_option = VoidUI_IB.options["hud_"..box_type] or 1
 
+    if self.is_floating_panel then
+        hud = managers.hud:script(PlayerBase.PLAYER_INFO_HUD_FULLSCREEN_PD2)
+        if hud then
+            return hud
+        else
+            self:Error("HUD is not loaded! "..tostring(self.id))
+        end
+    end
+
     local function pick_hud_assault_or_objectives(hud_option)
         if hud_option == 1 then
             if VoidUI.options.enable_assault then
@@ -289,7 +298,7 @@ function VoidUIInfobox:remove()
     end
     local hud = self:get_hud(self._type)
     local _custom_icons = hud._custom_icons
-    local icons_panel = hud._icons_panel
+    local icons_panel = hud._icons_panel and hud._icons_panel or hud.panel
     if _custom_icons and table.contains(_custom_icons[self._priority], self._panel) then
         table.remove(_custom_icons[self._priority], table.index_of(_custom_icons[self._priority], self._panel))
     end
@@ -305,8 +314,15 @@ function VoidUIInfobox:remove()
                     self._panel:set_x(math.lerp(panel_x, panel_x + panel_w, p))
                 end
             end)
+            
+            if self.is_floating_panel then
+                self._panel:parent():remove(self._panel)
+                FloatingInfobox:remove_floating_box(self.id)
+            else
+                icons_panel:remove(self._panel)
+            end
+
             self = nil
-            icons_panel:remove(self._panel)
         end)
         VoidUIInfobox.childrens[self.id] = nil
     end
@@ -348,7 +364,6 @@ end
 --To add text to the infobox, please do it in other Class create() function.
 function VoidUIInfobox:PrepareBox()
     local scale, panel_w, panel_h = self:get_scale_options()
-    local icons_panel
     local hud = self:get_hud(self._type)
 
     VoidUIInfobox.childrens = VoidUIInfobox.childrens or {}
@@ -357,7 +372,7 @@ function VoidUIInfobox:PrepareBox()
     if not hud then
         return false
     end
-    icons_panel = hud._icons_panel
+    local icons_panel = hud._icons_panel and hud._icons_panel or hud.panel --hud.panel is for Floating Infoboxes
     local _custom_icons = hud._custom_icons
 
     self._panel = icons_panel:panel({
@@ -372,12 +387,23 @@ function VoidUIInfobox:PrepareBox()
     self._icon = self:new_icon(texture, texture_rect)
     self._icon:set_center(self._background:center())
 
-    if self.position then
-        table.insert(_custom_icons[self._priority], self.position, self._panel)
-    else
-        table.insert(_custom_icons[self._priority], self._panel)
+    if _custom_icons then
+        if self.position then
+            table.insert(_custom_icons[self._priority], self.position, self._panel)
+        else
+            table.insert(_custom_icons[self._priority], self._panel)
+        end
+        hud:sort_boxes()
     end
-    hud:sort_boxes()
+    if self.is_floating_panel then
+        FloatingInfobox:add_floating_box({
+            id = self.id,
+            panel = self._panel,
+            pos = self.pos,
+            mov_unit = self.mov_unit,
+            radius = self._radius
+        })
+    end
     self._background:animate(callback(self, self, "_blink_background"))
 
     return true

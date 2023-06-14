@@ -30,6 +30,12 @@ function SentryInfobox:FetchInfo(data)
     end
     self.ammo_ratio = data.ammo_ratio
     self.health_ratio = data.health_ratio
+    
+    if VoidUI_IB.options.FloatingSentryBoxes then
+        self.is_floating_panel = true
+        self.pos = data.pos
+        self._radius = 340
+    end
 end
 
 function SentryInfobox:check_valid()

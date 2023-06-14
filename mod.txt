@@ -26,6 +26,7 @@
 		{"hook_id" : "lib/managers/hudmanagerpd2", "script_path" : "lua/Infobox/PerkInfobox.lua"},
 		{"hook_id" : "lib/managers/hudmanagerpd2", "script_path" : "lua/Infobox/SentryInfobox.lua"},
 		{"hook_id" : "lib/managers/hudmanagerpd2", "script_path" : "lua/Infobox/TimerInfobox.lua"},
+		{"hook_id" : "lib/managers/hudmanagerpd2", "script_path" : "lua/Infobox/FloatingInfobox.lua"},
 		{"hook_id" : "lib/managers/hudmanagerpd2", "script_path" : "lua/Infobox/AchievementInfobox.lua"},
 		{"hook_id" : "lib/units/beings/player/playerdamage", "script_path" : "lua/skills.lua"},
 		{"hook_id" : "lib/units/enemies/cop/logics/coplogicarrest", "script_path" : "lua/skills.lua"},
@@ -49,6 +50,7 @@
 		{"hook_id" : "lib/network/handlers/unitnetworkhandler", "script_path" : "lua/Jokers.lua"},
 		{"hook_id" : "core/lib/managers/mission/coreelementtimer", "script_path" : "lua/elementtimer.lua"},
 		{"hook_id" : "core/lib/managers/mission/coreelementtoggle", "script_path" : "lua/elementtimer.lua"},
+		{"hook_id" : "lib/units/enemies/cop/copbrain", "script_path" : "lua/pagers.lua"},
 		{"hook_id" : "lib/states/menumainstate", "script_path" : "lua/quickmenu.lua"}
 	]
 }

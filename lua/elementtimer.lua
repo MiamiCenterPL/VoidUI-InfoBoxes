@@ -5,13 +5,12 @@ if RequiredScript == "core/lib/managers/mission/coreelementtimer" then
 		
 	]]
 	local filter_table = {
-
 		["tRain_returns"] = {"130064", "130164", "130264", "130364", "130464", "130564", "131564", "131814"}, --Train fuse timer
 		["wwh"] = {"100590"},
 		["pent"] = {"102292", "102293", "102294"},
 		["crojob3"] = {"103449", "101577", "101708", "104399", "101099"},
 		["mia_2"] = {"130321", "131424", "136321"},
-		["chas"] = {"138531", "138831", "139731", "140031", "139431"},
+		["chas"] = {"138531", "138831", "139731", "140031", "139431", "138410"},
 		["des"] = {"136531", "159611", "133067"},
 		["big"] = {"105990", "105997", "105993", "106006"},
 		["dah"] = {"105076", "105083", "145903"},
@@ -33,8 +32,7 @@ if RequiredScript == "core/lib/managers/mission/coreelementtimer" then
 		["vit"] = {"152362", "134295", "134195", "134395", "134495"},
 		["bph"] = {"135953", "142253"},
 		["mex_cooking"] = {"199503"},
-		--["born"] = {},
-		["chew"] = {"143791", "143795", "144291", "144295", "144541", "144545", "144791", "144795"},
+		["chew"] = {"143791", "143795", "144291", "144295", "144541", "144545", "144791", "144795", "144041", "144045"},
 		["trai"] = {"140824", "141024", "137899", "137899", "139724", "141673"},
 		["spa"] = {"100181", "100540"},
 		["framing_frame_1"] = {"103086"},
@@ -46,11 +44,26 @@ if RequiredScript == "core/lib/managers/mission/coreelementtimer" then
 	local filter_names_table = {
 		--[[
 		]]
+		["sand"] = {
+			["146599"] = "Power",
+			["146799"] = "Power"
+		},
+		["hox_3"] = {
+			["139695"] = "Timer"
+		},
+		["constantine_restaurant_lvl"] = {
+			["130010"] = "Timer"
+		},
+		["help"] = {
+			["134860"] = "Timer",
+			["143260"] = "Timer"
+		},
 		["friend"] = {
 			["102813"] = "Breaching"
 		},
 		["born"] = {
-			["101033"] = "Assemble"
+			["101033"] = "Assemble",
+			["101532"] = "Assemble"
 		},
 		["pex"] = {
 			["101587"] = "Fire",
@@ -77,7 +90,8 @@ if RequiredScript == "core/lib/managers/mission/coreelementtimer" then
 			["101201"] = "Escape"
 		},
 		["roberts"] = {
-			["105234"] = "Time_lock"
+			["105234"] = "Time_lock",
+			["104627"] = "Plane"
 		},
 		["modders_devmap"] = {
 			["100866"] = "Timer"
@@ -137,7 +151,8 @@ if RequiredScript == "core/lib/managers/mission/coreelementtimer" then
 			["101043"] = "MiaCokeDestroy"
 		},
 		["pbr"] = {
-			["150099"] = "Fuel"
+			["150099"] = "Fuel",
+			["130114"] = "Timer"
 		},
 		["pbr2"] = {
 			["144023"] = "Helicopter",
@@ -232,7 +247,8 @@ if RequiredScript == "core/lib/managers/mission/coreelementtimer" then
 		},
 		["mus"] = {
 			["130318"] = "Time_lock",
-			["130393"] = "Time_lock"
+			["130393"] = "Time_lock",
+			["133919"] = "Timer"
 		},
 		["kosugi"] = {
 			["100953"] = "Time_lock"
@@ -277,6 +293,21 @@ if RequiredScript == "core/lib/managers/mission/coreelementtimer" then
 		return name, achievement_id
 	end
 	
+	local function get_pos(self)
+		local pos
+		if VoidUI_IB.options.FloatingETimerBoxes then
+			if self._digital_gui_units and self._digital_gui_units[1] then
+				local unit = self._digital_gui_units[1]
+				if alive(unit) then
+					pos = unit:position()
+				end
+			elseif self._values.position then
+				pos = self._values.position
+			end
+		end
+		return pos
+	end
+
 	core:module("CoreElementTimer")
 	core:import("CoreMissionScriptElement")
 	local hide_on_stop = {
@@ -288,6 +319,7 @@ if RequiredScript == "core/lib/managers/mission/coreelementtimer" then
 	ElementTimer = ElementTimer or class(CoreMissionScriptElement.MissionScriptElement)
 
 	Hooks:PostHook(ElementTimer, "init", "VUIBA_ElementTimer_init", function(self, ...)
+		VoidUI_IB = _G.VoidUI_IB
 		TimerInfobox = _G.TimerInfobox
 		AchievementInfobox = _G.AchievementInfobox
 		self._created = false
@@ -300,8 +332,9 @@ if RequiredScript == "core/lib/managers/mission/coreelementtimer" then
 			if achievement_id then
 				InfoboxClass = AchievementInfobox
 			end
+			local pos = get_pos(self)
 			InfoboxClass:new({
-				name = name, id = "e_"..self._id, time = self._timer, achievement_id = achievement_id, editor_name = self._editor_name, instance_name = self._values.instance_name
+				name = name, id = "e_"..self._id, time = self._timer, achievement_id = achievement_id, editor_name = self._editor_name, instance_name = self._values.instance_name, pos = pos
 			})
 			self._created = true
 		end
@@ -314,8 +347,9 @@ if RequiredScript == "core/lib/managers/mission/coreelementtimer" then
 			if achievement_id then
 				InfoboxClass = AchievementInfobox
 			end
+			local pos = get_pos(self)
 			InfoboxClass:new({
-				name = name, id = "e_"..self._id, time = self._timer, achievement_id = achievement_id, editor_name = self._editor_name, instance_name = self._values.instance_name
+				name = name, id = "e_"..self._id, time = self._timer, achievement_id = achievement_id, editor_name = self._editor_name, instance_name = self._values.instance_name, pos = pos
 			})
 			self._created = true
 		elseif self._created and self._values.enabled and TimerInfobox:child("e_"..self._id) then
@@ -373,8 +407,9 @@ if RequiredScript == "core/lib/managers/mission/coreelementtimer" then
 			if achievement_id then
 				InfoboxClass = AchievementInfobox
 			end
+			local pos = get_pos(self)
 			InfoboxClass:new({
-				name = name, id = "e_"..self._id, time = self._timer, achievement_id = achievement_id, editor_name = self._editor_name, instance_name = self._values.instance_name
+				name = name, id = "e_"..self._id, time = self._timer, achievement_id = achievement_id, editor_name = self._editor_name, instance_name = self._values.instance_name, pos = pos
 			})
 			self._created = true
 		end
@@ -427,8 +462,10 @@ if RequiredScript == "core/lib/managers/mission/coreelementtimer" then
 					end
 				elseif self._values.operation == "start" then
 					if not self._created then
+						local pos = get_pos(element)
+
 						local name, achievement_id = filter_names(id)
-						local data = {id = id, name = name, time = element._timer, achievement_id = achievement_id, editor_name = self._editor_name, instance_name = self._values.instance_name}
+						local data = {id = id, name = name, time = element._timer, achievement_id = achievement_id, editor_name = self._editor_name, instance_name = self._values.instance_name, pos = pos}
 						hud:add_custom_timer(data)
 						self._created = true
 					else

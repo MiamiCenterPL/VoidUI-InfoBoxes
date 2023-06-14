@@ -31,8 +31,17 @@
 			"callback" : "refresh_infoboxes"
 		},
 		{
+			"type" : "toggle",
+			"id" : "FloatingJokerBoxes",
+			"title" : "VoidUI_IB_FloatingJokerBoxes_title",
+			"description" : "VoidUI_IB_FloatingJokerBoxes_desc",
+			"default_value" : false,
+			"callback" : "refresh_infoboxes"
+		},
+		{
 			"type": "multiple_choice",
 			"id": "hud_Minion",
+			"parent": "jokers_infobox",
 			"title": "VoidUI_IB_Position_hud_title",
 			"description": "VoidUI_IB_Position_hud_desc",
 			"items": [

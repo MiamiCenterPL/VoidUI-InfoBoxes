@@ -5,6 +5,8 @@ Hooks:PostHook(HUDAssaultCorner, "init", "VUIBA_HUDAssaultCorner_init", function
 
 	local icons_panel = self._custom_hud_panel:child("icons_panel")
 	icons_panel:set_w(600 * self._scale)
+
+	FloatingInfobox:setup()
 end)
 
 Hooks:PostHook(HUDAssaultCorner, "setup_icons_panel", "VUIBA_HUDAssaultCorner_setup_icons_panel", function(self)
@@ -109,7 +111,9 @@ function HUDAssaultCorner:add_custom_timer(data)
 		id = "cu_"..data.id,
 		name = data.name and data.name or data.id,
 		time = data.time,
-		achievement_id = data.achievement_id and data.achievement_id or nil
+		achievement_id = data.achievement_id and data.achievement_id or nil,
+		pos = data.pos and data.pos or nil,
+		unit = data.unit and data.unit or nil,
 	})
 	managers.hud:add_updator("update_custom_timer_"..data.id, callback(self, self, "update_custom_timer", data))
 	if not self._timer then self._timer = {} end
@@ -164,6 +168,8 @@ function HUDAssaultCorner:add_custom_time(data)
 			elseif data.operation == "reset" or data.operation == "set_time" then
 				self._timer[data.id] = data.time
 				infobox._init_time = data.time
+			elseif data.operation == "pause" then
+				managers.hud:remove_updator("update_custom_timer_"..data.id)
 			end
 		else
 			VoidUIInfobox:Error("No operation specified for timer: "..data.id)
