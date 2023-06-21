@@ -52,13 +52,15 @@ Hooks:PostHook(HUDAssaultCorner, "setup_icons_panel", "VUIBA_HUDAssaultCorner_se
 			id = "special_enemies", value = managers.enemy._enemy_data.nr_special_units
 		})
 	end
-	for name,value in pairs(managers.enemy.special_counter) do
-		if VoidUI_IB.options["enemy_"..name.."_infobox"] then
-			CounterInfobox:new({
-				id = "enemy_"..name, value = value
-			})
-		end
-	end
+ if managers and managers.enemy and managers.enemy.special_counter then
+ 	for name,value in pairs(managers.enemy.special_counter) do
+ 		if VoidUI_IB.options["enemy_"..name.."_infobox"] then
+ 			CounterInfobox:new({
+ 				id = "enemy_"..name, value = value
+	 		})
+ 		end
+ 	end
+ end
 	if VoidUI_IB.options.civs_infobox then
 		CounterInfobox:new({
 			id = "civs", value = table.size(managers.enemy._civilian_data.unit_data)
