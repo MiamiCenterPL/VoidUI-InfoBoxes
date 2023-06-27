@@ -44,6 +44,17 @@ if RequiredScript == "core/lib/managers/mission/coreelementtimer" then
 	local filter_names_table = {
 		--[[
 		]]
+		["crojob2"] = {
+			["104648"] = "Hack"
+		},
+		["hvh"] = {
+			["100222"] = "Timer",
+			["141806"] = "Timer",
+			["141306"] = "Timer",
+			["139806"] = "Timer",
+			["140306"] = "Timer",
+			["140806"] = "Timer"
+		},
 		["sand"] = {
 			["146599"] = "Power",
 			["146799"] = "Power"
