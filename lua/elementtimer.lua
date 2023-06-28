@@ -53,6 +53,7 @@ if RequiredScript == "core/lib/managers/mission/coreelementtimer" then
 			["103532"] = "Timer",
 			["101686"] = "Fuel",
 			["105363"] = "Helicopter",
+			["139898"] = "Fire",
 			["102438"] = "Fuel"
 		},
 		["crojob2"] = {
