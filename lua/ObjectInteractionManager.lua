@@ -21,7 +21,7 @@ if VoidUI_IB.options.lootbags_infobox or VoidUI_IB.options.collectables or VoidU
 		"lance_part", "chas_keychain_forklift", "laxative", "defibrillator_paddles", "notepad", "adrenaline", "documents", "files",
 		"business_card", "hand", "c4_stackable", "evidence", "pex_loaded_card", "pex_unloaded_card", "pex_loaded_card_lvl_2",
 		"pex_cutter", "police_uniform", "circle_cutter", "medallion", "chimichanga", "liquid_nitrogen", "c4_x3", "president_key", "cas_bfd_tool",
-		"fire_extinguisher", "bridge", "ticket"}
+		"fire_extinguisher", "bridge", "ticket", "gas_canister", "deep_oil_sample"}
 		self.skipped_lootbags_id = {"turret_part"}
 		self._loot_bags = {}
 		self.loot_collectables = {}
@@ -61,7 +61,7 @@ if VoidUI_IB.options.lootbags_infobox or VoidUI_IB.options.collectables or VoidU
 			hydrogen_chloride = "HydrogenChloride", caustic_soda = "CausticSoda", acid = "MuriaticAcid",
 			paper_roll = "CPaper", printer_ink = "CInk", blow_torch = "BlowTorch", thermite_paste = "Thermite", thermite = "Thermite",
 			barrel = "Barrel", receiver = "Receiver", stock = "Stock", slot_machine_payout = "Money", federali_medal = "Gold",
-			mus_small_artifact = "Money", lrm_keycard = "Lrm_Keycard"
+			mus_small_artifact = "Money", lrm_keycard = "Lrm_Keycard", crowbar_stack = "Crowbar"
 		}
 		self.custom.loot_collectables = {}
 	end)

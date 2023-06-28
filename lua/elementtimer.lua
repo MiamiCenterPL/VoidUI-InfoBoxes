@@ -37,13 +37,24 @@ if RequiredScript == "core/lib/managers/mission/coreelementtimer" then
 		["spa"] = {"100181", "100540"},
 		["framing_frame_1"] = {"103086"},
 		["gallery"] = {"103086"},
-		["red2"] = {"136002", "136202"}
+		["red2"] = {"136002", "136202"},
+		["deep"] = {"103949"}
 		--["Election_Funds"] = {'101311', '100019'
 	}
 
 	local filter_names_table = {
 		--[[
+			103052
+			103532
+			101686
 		]]
+		["deep"] = {
+			["103052"] = "Analyze",
+			["103532"] = "Timer",
+			["101686"] = "Fuel",
+			["105363"] = "Helicopter",
+			["102438"] = "Fuel"
+		},
 		["crojob2"] = {
 			["104648"] = "Hack"
 		},
@@ -243,6 +254,8 @@ if RequiredScript == "core/lib/managers/mission/coreelementtimer" then
 			["103102"] = "Time_lock"
 		},
 		["cane"] = {
+			["136317"] = "Elf",
+			["135717"] = "Elf",
 			["135417"] = "Elf",
 			["135117"] = "Elf",
 			["132417"] = "Elf",
@@ -322,6 +335,7 @@ if RequiredScript == "core/lib/managers/mission/coreelementtimer" then
 	core:module("CoreElementTimer")
 	core:import("CoreMissionScriptElement")
 	local hide_on_stop = {
+		["deep"] = {"103052"},
 		["pent"] = {"103868"},
 		["hox_3"] = {"139695"},
 		["sah"] = {"101874", "100642"},
