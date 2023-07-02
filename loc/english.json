@@ -414,7 +414,7 @@
     "VoidUI_IB_timer_MiaCokeDestroy_title" : "Coke Destroy",
     "VoidUI_IB_timer_MiaCokeDestroy_desc" : "It's used in the Hotline Miami heist, day 2.\nIt will show you how much time do you have left untill thugs destroy the coke.",
     "VoidUI_IB_timer_RatVanFlee_title" : "Van Flee",
-    "VoidUI_IB_timer_RatVanFlee_desc" : "It's used in the Rats heist.\nIt will show you how much time do you have left untill the van flees.",
+    "VoidUI_IB_timer_RatVanFlee_desc" : "It's used in the Cook Off heist.\nIt will show you how much time do you have left untill the van flees.",
     "VoidUI_IB_timer_Bridge_title" : "Bridge",
     "VoidUI_IB_timer_Bridge_desc" : "It's used in the Goat Simulator heist.\nIt will show you how much time do you have left untill the bridge closes.",
     "VoidUI_IB_timer_BFD_desc" : "It's used in the Golden Grin Casino heist.\nIt will show you how much time do you have left untill the BFD finishes",
