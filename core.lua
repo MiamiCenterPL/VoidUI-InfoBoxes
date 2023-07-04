@@ -91,7 +91,7 @@ VoidUI_IB.get_texture_by_name = {
 		["Breaching"] = {texture = "guis/dlcs/big_bank/textures/pd2/pre_planning/preplan_icon_types", texture_rect = VoidUI_IB:get_texture_rect(48,7,2)},
 		["Barcode_scanner"] = {texture = "guis/textures/pd2/hud_pickups", texture_rect = VoidUI_IB:get_texture_rect(32,1,4)},
 		["Helicopter"] = {texture = "guis/dlcs/big_bank/textures/pd2/pre_planning/preplan_icon_types", texture_rect = VoidUI_IB:get_texture_rect(48,7,3)},
-		["Boat"] = {texture = "guis/dlcs/big_bank/textures/pd2/pre_planning/preplan_icon_types", texture_rect = VoidUI_IB:get_texture_rect(48,7,3)},
+		["Boat"] = {get_texture_by_achievement("armored_1")},
 		["Printer"] = {texture = "guis/textures/pd2/hud_pickups", texture_rect = VoidUI_IB:get_texture_rect(32,2,8)},
 		["Paper"] = {texture = "guis/textures/pd2/hud_pickups", texture_rect = VoidUI_IB:get_texture_rect(32,3,8)},
 		["Ink"] = {texture = "guis/textures/pd2/hud_pickups", texture_rect = VoidUI_IB:get_texture_rect(32,1,8)},
