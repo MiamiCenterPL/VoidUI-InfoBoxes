@@ -2,7 +2,6 @@ if not VoidUI_IB.options.kills_infobox and not VoidUI_IB.options.special_kills_i
 
 if RequiredScript == "lib/units/enemies/cop/copdamage" then
 	CopDamage = CopDamage or class()
-	Hooks:RemovePreHook("Infobox_CountVehicleKills")
 	Hooks:PreHook(CopDamage, "_call_listeners", "Infobox_CountVehicleKills", function(self, damage_info)
 		if self._unit:character_damage():dead() then
 			if damage_info.attacker_unit == managers.player:local_player() then

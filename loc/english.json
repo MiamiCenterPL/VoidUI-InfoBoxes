@@ -462,5 +462,9 @@
     "VoidUI_IB_timer_Pager" : "Pager",
     "VoidUI_IB_Pager" : "Pager",
     "VoidUI_IB_timer_Pager_desc" : "Pager timer (A floating timer) - will display an infobox timer on the guards for their pager timers",
+    "VoidUI_IB_timer_Boat_title" : "Boat",
+    "VoidUI_IB_timer_Boat" : "Boat",
+    "VoidUI_IB_Boat" : "Boat",
+    "VoidUI_IB_timer_Boat_desc" : "Boat timer, currently used on the Watchdogs heist [Day 2]",
     "VoidUI_IB_placeholder" : ""
 }

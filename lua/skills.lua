@@ -243,7 +243,6 @@ elseif RequiredScript == "lib/managers/playermanager" then
 elseif RequiredScript == "lib/units/beings/player/states/playerstandard" then
     if not VoidUI_IB.options.skills then return end
     if VoidUI_IB.options.skill_SixthSense then
-        Hooks:RemovePostHook("VUIB_update_sixth_sense")
         Hooks:PostHook(PlayerStandard, "_update_omniscience", "VUIB_update_sixth_sense", function(self, t, dt)
             if not SkillInfobox then return end
             local once = true

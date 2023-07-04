@@ -1,22 +1,7 @@
 if not VoidUI_IB.options.timers then return end
 Hooks:PostHook(TimerGui, 'init', 'init_hud_timer', function(self, ...)
-	self._unit_names = {
-	    drill = "Drill", pd1_drill = "Drill",
-	    lance = "Thermal_drill",
-	    huge_lance = "The_Beast",
-	    votingmachine2 = "Hack", hack_suburbia = "Hack", hold_hack_comp = "Hack", hack_suburbia_axis = "Hack",
-		hack_suburbia_outline = "Hack", hold_hack_server_room = "Hack", hack_ipad = "Hack", mcm_laptop = "Hack",
-		tag_laptop = "Hack", hack_suburbia_jammed_y = "Hack", hold_new_hack = "Hack", chca_start_hacking = "Hack",
-		are_laptop = "Hack", hack_trai_outline = "Hack", corp_hack_email = "Hack", cas_copy_usb = "Hack",
-	    hold_download_keys = "Download", uload_database = "Upload", corp_download_email = "Download",
-	    hold_analyze_evidence = "Analyze",
-	    upload_database = "Upload",
-		unlock_gate = "Timer",
-		gen_int_saw = "Saw", apartment_saw = "Saw",
-		hold_charge_gun = "ChargeGun"
-	}
+	self._unit_names = VoidUI_IB:LoadTweakDataFromFile("tweakdata/TimerGuiTweakData.json")
 end)
-Hooks:RemovePostHook("add_new_timer")
 Hooks:PostHook(TimerGui, '_start', 'add_new_timer', function(self, ...)
 	if not self._created and TimerInfobox and alive(self._unit) then
 		local editor_name

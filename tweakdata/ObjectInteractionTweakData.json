@@ -1,0 +1,245 @@
+{
+    "skipped" : [     
+        "harddrive",
+        "gas",
+        "cas_usb_key",
+        "alarm_clock",
+        "fertilizer",
+        "wire",
+        "diesel",
+        "saw",
+        "car_jack",
+        "blueprints",
+        "bottle",
+        "cas_sleeping_gas",
+        "cas_winch_hook",
+        "briefcase",
+        "keychain",
+        "equipment_blueprint",
+        "cargo_strap",
+        "stapler",
+        "chavez_key",
+        "server",
+        "ranc_hammer",
+        "ranc_mould",
+        "ranc_sheriff_star",
+        "audio_device",
+        "c4",
+        "ranc_acid",
+        "laptop",
+        "ranc_silver_ingot",
+        "tape",
+        "fingerprint",
+        "flammable_liquid",
+        "blood_sample",
+        "blood_sample_verified",
+        "plates",
+        "barcode_opa_locka",
+        "barcode_edgewater",
+        "barcode_isles_beach",
+        "barcode_downtown",
+        "barcode_brickell",
+        "c4_x1",
+        "lance_part",
+        "chas_keychain_forklift",
+        "laxative",
+        "defibrillator_paddles",
+        "notepad",
+        "adrenaline",
+        "documents",
+        "files",
+        "business_card",
+        "hand",
+        "c4_stackable",
+        "evidence",
+        "pex_loaded_card",
+        "pex_unloaded_card",
+        "pex_loaded_card_lvl_2",
+        "pex_cutter",
+        "police_uniform",
+        "circle_cutter",
+        "medallion",
+        "chimichanga",
+        "liquid_nitrogen",
+        "c4_x3",
+        "president_key",
+        "cas_bfd_tool",
+        "fire_extinguisher",
+        "bridge",
+        "ticket",
+        "gas_canister",
+        "deep_oil_sample"
+    ],
+    "skipped_units" : {
+        "skm_watchdogs_stage2" : [
+            "all"
+        ],
+        "rvd2" : [
+            "100277",
+            "100280",
+            "100278",
+            "100279",
+            "100296"
+        ],
+        "shoutout_raid" : [
+            "103336",
+            "103335",
+            "103346",
+            "101005",
+            "101000",
+            "105005",
+            "103206",
+            "103197",
+            "103194"
+        ],
+        "mia_1" : [
+            "104526"
+        ],
+        "ukrainian_job" : [
+            "100034",
+            "100033"
+        ],
+        "arm_und" : [
+            "103835",
+            "103836",
+            "103837",
+            "103838",
+            "101238",
+            "101240",
+            "101237",
+            "101239"
+        ],
+        "mus" : [
+            "300686",
+            "300457",
+            "300458"
+        ],
+        "firestarter_2" : [
+            "107208"
+        ],
+        "skm_big2" : [
+            "101499"
+        ],
+        "des" : [
+            "101757",
+            "102204",
+            "400617",
+            "400577",
+            "400515",
+            "400513",
+            "400492"
+        ],
+        "ranc" : [
+            "101286",
+            "101285"
+        ],
+        "fish" : [
+            "500533"
+        ],
+        "big" : [
+            "101499"
+        ],
+        "skm_cas" : [
+            "all"
+        ],
+        "roberts" : [
+            "106104"
+        ],
+        "pent" : [
+            "500849",
+            "500608"
+        ],
+        "family" : [
+            "100899",
+            "100900",
+            "100901",
+            "100902"
+        ],
+        "pbr2" : [
+            "100883"
+        ],
+        "sand" : [
+            "102156"
+        ],
+        "welcome_to_the_jungle_1" : [
+            "100870",
+            "100871",
+            "100868",
+            "100867",
+            "100866",
+            "100886",
+            "100872"
+        ],
+        "sah" : [
+            "400791",
+            "400792"
+        ],
+        "watchdogs_2" : [
+            "100492",
+            "100429",
+            "100491",
+            "100427",
+            "100494",
+            "100495",
+            "100058",
+            "100426",
+            "100054",
+            "100428"
+        ]
+    },
+    "name_by_lootID" : {
+        "vault_loot_ring":"Jewellery",
+        "bank_manager_key":"Keycard",
+        "caustic_soda":"CausticSoda",
+        "gen_atm":"Money",
+        "printer_ink":"CInk",
+        "hydrogen_chloride":"HydrogenChloride",
+        "thermite_paste":"Thermite",
+        "blow_torch":"BlowTorch",
+        "vault_loot_coins":"Money",
+        "receiver":"Receiver",
+        "money_bundle":"Money",
+        "help_keycard":"Keycard",
+        "vault_loot_banknotes":"Money",
+        "paper_roll":"CPaper",
+        "barrel":"Barrel",
+        "ring_band":"Jewellery",
+        "vault_loot_cash":"Money",
+        "vault_loot_diamond_collection":"Jewellery",
+        "acid":"MuriaticAcid",
+        "gold_bag_equip":"Gold",
+        "diamondheist_vault_bust":"Jewellery",
+        "spawn_bucket_of_money":"Gold",
+        "vault_loot_diamond_chest":"Jewellery",
+        "boards":"Planks",
+        "diamondheist_big_diamond":"Jewellery",
+        "crowbar_stack":"Crowbar",
+        "lrm_keycard":"Lrm_Keycard",
+        "diamondheist_vault_diamond":"Jewellery",
+        "federali_medal":"Gold",
+        "thermite":"Thermite",
+        "slot_machine_payout":"Money",
+        "stock":"Stock",
+        "vault_loot_jewels":"Jewellery",
+        "vault_loot_chest":"Jewellery",
+        "crowbar":"Crowbar",
+        "mus_small_artifact":"Money",
+        "vault_loot_silver":"Jewellery",
+        "vault_loot_trophy":"Gold",
+        "equipment_mayan_gold":"Gold",
+        "planks":"Planks",
+        "vault_loot_gold":"Gold"
+    },
+    "lootbag_ids" : [
+        "Idstring(@IDd8a53063af19a97f@)",
+        "Idstring(@IDdd162740788712c8@)",
+        "Idstring(@IDee6e75483ec4e88a@)",
+        "Idstring(@ID76162146f9627eb6@)",
+        "Idstring(@ID03777a07c372d31e@)",
+        "Idstring(@ID853940b5f91847cf@)",
+        "Idstring(@ID1a0cd6ee5dfe2aed@)"
+        ],
+    "skipped_lootbags_id" : [
+        "turret_part"
+    ]
+}

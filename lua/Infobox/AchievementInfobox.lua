@@ -122,6 +122,7 @@ function AchievementInfobox:award()
 end
 
 function AchievementInfobox:set_valid(value)
+    if not self or not self._name_panel then return end
     if value then
         self._name_panel:set_color(Color.white)
     else

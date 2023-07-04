@@ -401,6 +401,15 @@
 			"description" : "VoidUI_IB_timer_RatVanFlee_desc",
 			"callback": "refresh_infoboxes",
 			"default_value" : true
+		},
+		{
+			"type" : "toggle",
+			"id" : "timer_Boat",
+			"parent" : "timers",
+			"title" : "VoidUI_IB_timer_Boat_title",
+			"description" : "VoidUI_IB_timer_Boat_desc",
+			"callback": "refresh_infoboxes",
+			"default_value" : true
 		}
     ]
 }

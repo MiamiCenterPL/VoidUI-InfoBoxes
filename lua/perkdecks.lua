@@ -9,7 +9,7 @@ end
 
 if VoidUI_IB.options.skill_ArmorRecovery and RequiredScript == "lib/units/beings/player/playerdamage" then
     Hooks:PostHook(PlayerDamage, "set_regenerate_timer_to_max", "VUIBA_PlayerDamage_set_regenerate_timer_to_max", function(self)
-        if get_current_perkdeck() == "menu_st_spec_19" then return Hooks:RemovePostHook("VUIBA_PlayerDamage_set_regenerate_timer_to_max") end
+        if get_current_perkdeck() == "menu_st_spec_19" then Hooks:RemovePostHook("VUIBA_PlayerDamage_set_regenerate_timer_to_max") return end
         local data = {id = "ArmorRecovery", type = "Perk", time = self._regenerate_timer}
         managers.hud._hud_objectives:add_buff(data)
     end)

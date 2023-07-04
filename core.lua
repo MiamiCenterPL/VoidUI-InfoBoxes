@@ -38,6 +38,28 @@ function VoidUI_IB:get_texture_rect(size, x, row)
 	}
 end
 
+--[[function VoidUI_IB:CodeTweakData(file_path, tbl)
+		local file = io.open(VoidUI_IB.mod_path..file_path, "w+")
+		if file then
+			file:write(json.encode(tbl))
+			file:close()
+			return
+		else
+			log("[VoidUI_IB] Error: Could not load "..file_path.."!")
+		end
+	end]]
+
+	function VoidUI_IB:LoadTweakDataFromFile(file_path)
+		local file = io.open(VoidUI_IB.mod_path..file_path, "r")
+		if file then
+			local data = json.decode( file:read("*all") )
+			file:close()
+			return data
+		else
+			log("[VoidUI_IB] Error: Could not load "..file_path.."!")
+		end
+	end
+
 VoidUI_IB.get_texture_by_name = {
 		--Infoboxes
 		["kills"] = {texture = "units/payday2_cash/safes/cop/sticker/dw_skull_df"},
@@ -69,6 +91,7 @@ VoidUI_IB.get_texture_by_name = {
 		["Breaching"] = {texture = "guis/dlcs/big_bank/textures/pd2/pre_planning/preplan_icon_types", texture_rect = VoidUI_IB:get_texture_rect(48,7,2)},
 		["Barcode_scanner"] = {texture = "guis/textures/pd2/hud_pickups", texture_rect = VoidUI_IB:get_texture_rect(32,1,4)},
 		["Helicopter"] = {texture = "guis/dlcs/big_bank/textures/pd2/pre_planning/preplan_icon_types", texture_rect = VoidUI_IB:get_texture_rect(48,7,3)},
+		["Boat"] = {texture = "guis/dlcs/big_bank/textures/pd2/pre_planning/preplan_icon_types", texture_rect = VoidUI_IB:get_texture_rect(48,7,3)},
 		["Printer"] = {texture = "guis/textures/pd2/hud_pickups", texture_rect = VoidUI_IB:get_texture_rect(32,2,8)},
 		["Paper"] = {texture = "guis/textures/pd2/hud_pickups", texture_rect = VoidUI_IB:get_texture_rect(32,3,8)},
 		["Ink"] = {texture = "guis/textures/pd2/hud_pickups", texture_rect = VoidUI_IB:get_texture_rect(32,1,8)},
@@ -161,7 +184,7 @@ VoidUI_IB.get_texture_by_name = {
 			return data
 		end
 		log("[VoidUI_IB] Error: Could not load default config!")
-	return {}
+		return {}
 	end
 	
 	function VoidUI_IB:Save()

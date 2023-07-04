@@ -187,6 +187,7 @@
 		"timer_Elf":false,
 		"timer_MiaCokeDestroy":false,
 		"timer_RatVanFlee":true,
+		"timer_Boat":true,
 		"timer_Bridge":true,
 		"timer_The_Beast":true,
 		"timer_Download":true,
