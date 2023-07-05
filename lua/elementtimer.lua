@@ -3,7 +3,7 @@ if RequiredScript == "core/lib/managers/mission/coreelementtimer" then
 	local tweakdata = VoidUI_IB:LoadTweakDataFromFile("tweakdata/TimersTweakData.json")
 
 	local filter_table = tweakdata.filter_table
-	local filter_names_table = tweakdata.filter_names
+	local filter_names_table = tweakdata.filter_names_table
 	local hide_on_stop = tweakdata.hide_on_stop
 
 	local function get_level_id()
