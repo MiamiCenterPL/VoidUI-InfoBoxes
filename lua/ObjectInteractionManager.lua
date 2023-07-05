@@ -17,6 +17,7 @@ if VoidUI_IB.options.lootbags_infobox or VoidUI_IB.options.collectables or VoidU
 		self.skipped_lootbags_id = tweakdata.skipped_lootbags_id
 		self._skipped_units = tweakdata.skipped_units
 		self.name_by_lootID = tweakdata.name_by_lootID
+  self.skipped = tweakdata.skipped
 		self._loot_bags = {}
 		self.loot_collectables = {}
 		self.possible_loot = {}
