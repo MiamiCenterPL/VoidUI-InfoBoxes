@@ -25,11 +25,6 @@
             "130223":"Time_lock",
             "130323":"Time_lock"
         },
-        "watchdogs_2_day":{
-            "103729":"Boat",
-            "101130":"Boat",
-            "101128":"Boat"
-        },
         "roberts":{
             "104627":"Plane",
             "105234":"Time_lock"
@@ -211,9 +206,14 @@
             "152308":"Crane",
             "152295":"Crane"
         },
-        "watchdogs_2":{
-            "103729":"Boat",
+        "watchdogs_2_day":{
             "101130":"Boat",
+            "101132":"Boat",
+            "101128":"Boat"
+        },
+        "watchdogs_2":{
+            "101130":"Boat",
+            "101132":"Boat",
             "101128":"Boat"
         },
         "deep":{
@@ -437,7 +437,13 @@
             "134528",
             "134828",
             "132428"
-        ]  
+        ],
+        "watchdogs_2" : [
+            "103729"
+        ],
+        "watchdogs_2_day" : [
+            "103729"
+        ]
     },
     "hide_on_stop" : {
 		"deep" : [
