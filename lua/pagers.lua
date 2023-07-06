@@ -1,4 +1,6 @@
-Hooks:PreHook(CopBrain, "clbk_alarm_pager", "CHANGEME_CopBrain_clbk_alarm_pager", function(self, ignore_this, data)
+if not _G.VoidUI_IB.options.timer_Pager then return end
+
+Hooks:PreHook(CopBrain, "clbk_alarm_pager", "VUIB_clbk_alarm_pager", function(self, ignore_this, data)
     local pager_data = self._alarm_pager_data
     if pager_data.nr_calls_made == 0 then
         if managers.groupai:state():is_ecm_jammer_active("pager") then
@@ -17,7 +19,7 @@ Hooks:PreHook(CopBrain, "clbk_alarm_pager", "CHANGEME_CopBrain_clbk_alarm_pager"
     end
 end)
 
-Hooks:PostHook(CopBrain, "on_alarm_pager_interaction", "CHANGEME_CopBrain_on_alarm_pager_interaction", function(self, status, player)
+Hooks:PostHook(CopBrain, "on_alarm_pager_interaction", "VUIB_on_alarm_pager_interaction", function(self, status, player)
     local box = VoidUIInfobox:child("cu_pager_"..self._unit:id())
     if not box then return end
 	if status == "started" then
@@ -28,4 +30,11 @@ Hooks:PostHook(CopBrain, "on_alarm_pager_interaction", "CHANGEME_CopBrain_on_ala
     elseif status == "complete" or status == "interrupted" then
         box:remove()
     end
+end)
+
+--Remove the panel when the pager is gone, e.g. when the heist goes loud.
+Hooks:PostHook(CopBrain, "end_alarm_pager", "VUIB_end_alarm_pager", function(self)
+    local box = VoidUIInfobox:child("cu_pager_"..self._unit:id())
+    if not box then return end
+    box:remove()
 end)
