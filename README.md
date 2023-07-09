@@ -46,6 +46,7 @@ Similar to Jokers infobox, but for Sentry guns, it can track
 It can also remember each sentry kills soo when you pick it up and place it back again, it will show the correct number (But in case you want it to begin counting from 0, you can turn "Remember kills" option off)
 ### Timers
 Generic timers;
+- Pagers
 - Drill
 - Time lock
 - Tape loop
@@ -79,6 +80,7 @@ Heist specific timers;
 - Power
 - Arrest cooldown
 - Elf
+- Boat
 ### Skills and perkdecks
 - Total speed bonus
 - Armor recovery
@@ -132,3 +134,13 @@ Void UI (Required!)
 - https://modworkshop.net/mod/20997
 
 Void UI Infoboxes, Void UI and BeardLib are mods and therefore you need to unpack them to the PAYDAY 2/mods folder.
+##Credits
+Xeletron for releasing VoidUI
+test1 for maintenaning it overtime
+
+lil Bitz for generous support, localization fixes, new features ideas and help with filtering a lot of timers
+
+Okumura for debugging and reporting timers
+MaximysKing for feedback and testing
+Zelzone Zero for chineese translation
+TARE104KA for russian translation
