@@ -226,7 +226,9 @@
         },
         "sand":{
             "146799":"Power",
-            "146599":"Power"
+            "146599":"Power",
+            "146699":"Power",
+            "168767":"Helicopter"
         },
         "crojob3":{
             "130179":"Helicopter",
