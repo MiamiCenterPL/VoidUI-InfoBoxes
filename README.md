@@ -134,7 +134,7 @@ Void UI (Required!)
 - https://modworkshop.net/mod/20997
 
 Void UI Infoboxes, Void UI and BeardLib are mods and therefore you need to unpack them to the PAYDAY 2/mods folder.
-##Credits
+## Credits
 Xeletron for releasing VoidUI
 test1 for maintenaning it overtime
 
