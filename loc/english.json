@@ -466,5 +466,10 @@
     "VoidUI_IB_timer_Boat" : "Boat",
     "VoidUI_IB_Boat" : "Boat",
     "VoidUI_IB_timer_Boat_desc" : "Boat timer, currently used on the Watchdogs heist [Day 2]",
+    "VoidUI_IB_trackers_title" : "Trackers",
+    "VoidUI_IB_trackers_menu_desc" : "Options for misc Trackers",
+    "VoidUI_IB_trackers_desc" : "Track some misc values in-game that are listed below?",
+    "VoidUI_IB_track_Drama_title" : "Drama",
+    "VoidUI_IB_track_Drama_desc" : "Track Drama value?\nWhen the tracker hits 100% you're in high drama zone, which means the game will probably force an assault.",
     "VoidUI_IB_placeholder" : ""
 }

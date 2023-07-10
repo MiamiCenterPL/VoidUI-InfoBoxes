@@ -48,6 +48,16 @@
 			"next_menu" : "timers"
 		},
 		{
+			"type" : "divider"
+		},
+		{
+			"type" : "button",
+			"id" : "trackers_buttom",
+			"title" : "VoidUI_IB_trackers_title",
+			"description" : "VoidUI_IB_trackers_menu_desc",
+			"next_menu" : "trackers"
+		},
+		{
 			"type" : "button",
 			"id" : "achivenments_buttom",
 			"title" : "VoidUI_IB_achievements_title",

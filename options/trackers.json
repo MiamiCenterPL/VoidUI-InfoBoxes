@@ -1,0 +1,59 @@
+{
+	"menu_id" : "trackers",
+	"parent_menu" : "infobox",
+	"title" : "VoidUI_IB_trackers_title",
+	"priority" : 4,
+	"items" : [
+        {
+			"type" : "toggle",
+			"id" : "trackers",
+			"is_parent" : true,
+			"title" : "VoidUI_IB_trackers_title",
+			"description" : "VoidUI_IB_trackers_desc",
+			"callback": "refresh_infoboxes",
+			"default_value" : true
+		},
+        {
+			"type" : "multiple_choice",
+			"id" : "Tracker_priority",
+			"parent" : "trackers",
+			"title" : "VoidUI_IB_priority_title",
+			"description" : "VoidUI_IB_priority_desc",
+			"callback": "refresh_infoboxes",
+			"items" : [
+				"ib_one", 
+				"ib_two",
+				"ib_three",
+				"ib_four",
+				"ib_five",
+				"ib_six"
+			],
+			"default_value" : 2
+		},
+        {
+			"type": "multiple_choice",
+			"id": "hud_Tracker",
+			"parent": "trackers",
+			"title": "VoidUI_IB_Position_hud_title",
+			"description": "VoidUI_IB_Position_hud_desc",
+			"callback": "refresh_infoboxes",
+			"items": [
+				"ib_assault_corner",
+				"ib_objectives",
+				"ib_hud_one",
+				"ib_hud_two",
+				"ib_hud_three",
+				"ib_hud_four"
+			],
+			"default_value": 1
+		},
+        {
+			"type" : "toggle",
+			"id" : "track_Drama",
+			"parent" : "trackers",
+			"title" : "VoidUI_IB_track_Drama_title",
+			"description" : "VoidUI_IB_track_Drama_desc",
+			"default_value" : false
+		}
+    ]
+}
