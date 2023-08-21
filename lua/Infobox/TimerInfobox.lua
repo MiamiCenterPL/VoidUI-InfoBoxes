@@ -24,7 +24,7 @@ function TimerInfobox:FetchInfo(data)
     self.string_id = data.name
 
     if self.string_id == "Unknown" and VoidUI_IB.options.PrintUnknownTimers and not VoidUI_IB.options.debug_show_timer_id then
-        self:DebugPrint("Unknown timer, please report this to VoidUIInfoboxes dev".."\nID: "..tostring(data.id)..(data.editor_name and "\nName: "..tostring(data.editor_name) or "").."\nLevelID: "..tostring(Global.game_settings.level_id)..(data.instance_name and "\nInstanceName: "..tostring(data.instance_name) or ""))
+        self:DebugPrint("Unknown timer, please report this to VoidUIInfoboxes dev".."\nID: "..tostring(data.id)..(data.editor_name and "\nName: "..tostring(data.editor_name) or "").."\nLevelID: "..tostring(Global.game_settings.level_id)..(data.instance_name and "\nInstanceName: "..tostring(data.instance_name) or ""..(data.time and "\nTime: "..tostring(data.time) or "")))
     end
 
     if data.pos then
