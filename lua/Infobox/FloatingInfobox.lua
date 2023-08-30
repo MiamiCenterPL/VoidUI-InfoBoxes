@@ -179,6 +179,11 @@ function FloatingInfobox:add_floating_box(data)
 		blend_mode = data.blend_mode
 	})
 	arrow:set_center(data.panel:center())
+    --Temporary fix for when Infoboxes spawn before class beeing initialized.
+    if not self._floating_boxes then
+         self:setup()
+    end
+    --
     table.insert(self._floating_boxes, {
         movement = data.mov_unit and data.mov_unit:movement(),
         pos = data.pos,
