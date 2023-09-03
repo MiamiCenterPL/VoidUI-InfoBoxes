@@ -3,7 +3,7 @@ name: Crash report
 about: Aware users about what kind of information should be sent.
 title: "[Crash] "
 labels: bug
-assignees: ''
+assignees: MiamiCenterPL
 
 ---
 
