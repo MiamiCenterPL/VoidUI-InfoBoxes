@@ -17,7 +17,7 @@ if VoidUI_IB.options.lootbags_infobox or VoidUI_IB.options.collectables or VoidU
 		self.skipped_lootbags_id = tweakdata.skipped_lootbags_id
 		self._skipped_units = tweakdata.skipped_units
 		self.name_by_lootID = tweakdata.name_by_lootID
-  self.skipped = tweakdata.skipped
+		self.skipped = tweakdata.skipped
 		self._loot_bags = {}
 		self.loot_collectables = {}
 		self.possible_loot = {}
@@ -37,6 +37,8 @@ if VoidUI_IB.options.lootbags_infobox or VoidUI_IB.options.collectables or VoidU
 	local function _get_unit_type(unit)
 		local carry_id = unit:carry_data() and unit:carry_data():carry_id()
 		local interact_type = unit:interaction().tweak_data
+		local counted_by_int = {"weapon_case", "weapon_case_axis_z", "crate_loot", "crate_loot_crowbar"}
+		local counted_int_type = {"hold_take_helmet", "take_weapons_axis_z"}
 
 		if table.contains(managers.interaction.lootbag_ids, tostring(unit:name())) then
 			return "bagged_loot"
@@ -52,7 +54,9 @@ if VoidUI_IB.options.lootbags_infobox or VoidUI_IB.options.collectables or VoidU
 				return "skipped"
 			end
 			return "lootbag"
-		elseif interact_type == "weapon_case" or interact_type == "crate_loot" or interact_type == "crate_loot_crowbar" then
+		elseif interact_type and table.contains(counted_int_type, interact_type) then
+			return "lootbag"
+		elseif table.contains(counted_by_int, interact_type) then
 			return "possible_loot"
 		end
 
@@ -79,7 +83,7 @@ if VoidUI_IB.options.lootbags_infobox or VoidUI_IB.options.collectables or VoidU
 				self.bagged = self.bagged + 1
 				self:update_loot_count()
 			elseif unit_type == "lootbag" then
-				local name = unit:carry_data() and unit:carry_data():carry_id() or interact_type
+				local name = carry_id or interact_type
 				if table.contains(self.skipped_lootbags_id, name) then
 					return
 				end
