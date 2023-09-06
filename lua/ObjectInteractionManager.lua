@@ -37,8 +37,9 @@ if VoidUI_IB.options.lootbags_infobox or VoidUI_IB.options.collectables or VoidU
 	local function _get_unit_type(unit)
 		local carry_id = unit:carry_data() and unit:carry_data():carry_id()
 		local interact_type = unit:interaction().tweak_data
-		local counted_by_int = {"weapon_case", "weapon_case_axis_z", "crate_loot", "crate_loot_crowbar"}
-		local counted_int_type = {"hold_take_helmet", "take_weapons_axis_z"}
+		local counted_possible_by_int = {"gen_pku_warhead_box", "weapon_case", "weapon_case_axis_z", "crate_loot", "crate_loot_crowbar"}
+		local counted_by_int = {"hold_take_helmet", "take_weapons_axis_z"}
+		log(tostring(interact_type))
 
 		if table.contains(managers.interaction.lootbag_ids, tostring(unit:name())) then
 			return "bagged_loot"
@@ -54,9 +55,9 @@ if VoidUI_IB.options.lootbags_infobox or VoidUI_IB.options.collectables or VoidU
 				return "skipped"
 			end
 			return "lootbag"
-		elseif interact_type and table.contains(counted_int_type, interact_type) then
+		elseif interact_type and table.contains(counted_by_int, interact_type) then
 			return "lootbag"
-		elseif table.contains(counted_by_int, interact_type) then
+		elseif interact_type and table.contains(counted_possible_by_int, interact_type) then
 			return "possible_loot"
 		end
 
