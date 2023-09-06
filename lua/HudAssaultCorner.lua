@@ -72,7 +72,7 @@ Hooks:PostHook(HUDAssaultCorner, "setup_icons_panel", "VUIBA_HUDAssaultCorner_se
 			id = "lootbags", value = value
 		})
 	end
-	if VoidUI_IB.options.possible_loot then
+	if VoidUI_IB.options.possible_loot_infobox then
 		CounterInfobox:new({
 			id = "possible_loot", value = #int_manager.possible_loot
 		})
