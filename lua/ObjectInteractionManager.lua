@@ -63,7 +63,7 @@ if VoidUI_IB.options.lootbags_infobox or VoidUI_IB.options.collectables or VoidU
 			return "collectable"
 		end
 	end
-
+	
 	Hooks:PostHook(ObjectInteractionManager, "add_unit", "VUIBA_ObjectInteractionManager_add_unit", function(self, unit)
 		if alive(unit) then
 			local carry_id = unit:carry_data() and unit:carry_data():carry_id()
@@ -77,10 +77,18 @@ if VoidUI_IB.options.lootbags_infobox or VoidUI_IB.options.collectables or VoidU
 			if not unit_type or unit_type == "skipped" then
 				return
 			end
-			if unit_type == "bagged_loot" then
-				self._loot_bags[unit:id()] = true
-				self.bagged = self.bagged + 1
-				self:update_loot_count()
+			if unit_type == "bagged_loot" then --Has any value?
+				--Due to bags not having Carry Data in the exact moment when Interaction is created, we need to add a little delay...
+				DelayedCalls:Add("delay_cnt_"..unit_id, 0.01, function()
+					local carry_id = unit:carry_data():carry_id()
+					if tweak_data.carry[carry_id].bag_value then
+						self._loot_bags[unit:id()] = true
+						self.bagged = self.bagged + 1
+						self:update_loot_count()
+					else
+						return
+					end
+				end)
 			elseif unit_type == "lootbag" then
 				local name = carry_id or interact_type
 				if table.contains(self.skipped_lootbags_id, name) then
