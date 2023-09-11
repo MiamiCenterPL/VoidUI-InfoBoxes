@@ -81,7 +81,7 @@ if VoidUI_IB.options.lootbags_infobox or VoidUI_IB.options.collectables or VoidU
 				--Due to bags not having Carry Data in the exact moment when Interaction is created, we need to add a little delay...
 				DelayedCalls:Add("delay_cnt_"..unit_id, 0.01, function()
 					local carry_id = unit:carry_data():carry_id()
-					if tweak_data.carry[carry_id].bag_value then
+					if tweak_data and tweak_data.carry and tweak_data.carry[carry_id].bag_value then
 						self._loot_bags[unit:id()] = true
 						self.bagged = self.bagged + 1
 						self:update_loot_count()
