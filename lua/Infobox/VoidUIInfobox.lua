@@ -144,7 +144,7 @@ function VoidUIInfobox:get_hud(box_type) --Ready
     local hud_option = VoidUI_IB.options["hud_"..box_type] or 1
 
     if self.is_floating_panel then
-        hud = managers.hud:script(PlayerBase.PLAYER_INFO_HUD_FULLSCREEN_PD2)
+        hud = managers.hud:script(PlayerBase.PLAYER_INFO_HUD_PD2)
         if hud then
             return hud
         else
