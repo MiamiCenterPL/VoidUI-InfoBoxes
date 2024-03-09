@@ -205,7 +205,8 @@
             "201561" : "Time_lock"
         },
         "hox_3" : {
-            "139695" : "Timer"
+            "139695" : "Timer",
+            "132676" : "Timer"
         },
         "trai" : {
             "152308" : "Crane",
@@ -237,7 +238,8 @@
         },
         "crojob3" : {
             "130179" : "Helicopter",
-            "102824" : "Water_pump"
+            "102824" : "Water_pump",
+            "130129" : "Water_pump"
         },
         "ranc" : {
             "102076" : "Plane"
