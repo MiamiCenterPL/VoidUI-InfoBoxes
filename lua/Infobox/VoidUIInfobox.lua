@@ -179,8 +179,9 @@ function VoidUIInfobox:get_hud(box_type) --Ready
             local overflow_hud = VoidUI_IB.options[hud_option.."_hud_overflow"] or 3
             if overflow_hud == 3 then
                 self:Error("Infobox HUD is full, removing infobox.")
+                self._removing = true
                 self:remove()
-                return
+                return nil
             else
                 hud = pick_hud_assault_or_objectives(overflow_hud)
             end
@@ -296,7 +297,33 @@ function VoidUIInfobox:remove()
             return
         end
     end
+    
+    -- Prevent infinite recursion during removal process
+    if self._removing then
+        if alive(self._panel) then
+            self._panel:parent():remove(self._panel)
+        end
+        if VoidUIInfobox.childrens then
+            VoidUIInfobox.childrens[self.id] = nil
+        end
+        self:_remove()
+        self = nil
+        return
+    end
+    
     local hud = self:get_hud(self._type)
+    if not hud then
+        -- If we can't get HUD, just clean up what we can
+        if alive(self._panel) then
+            self._panel:parent():remove(self._panel)
+        end
+        if VoidUIInfobox.childrens then
+            VoidUIInfobox.childrens[self.id] = nil
+        end
+        self:_remove()
+        self = nil
+        return
+    end
     local _custom_icons = hud._custom_icons
     local icons_panel = hud._icons_panel and hud._icons_panel or hud.panel
     if _custom_icons and table.contains(_custom_icons[self._priority], self._panel) then
