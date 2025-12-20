@@ -88,6 +88,7 @@ VoidUI_IB.get_texture_by_name = {
 		["Cutter"] = {texture = "guis/textures/pd2/hud_pickups", texture_rect = VoidUI_IB:get_texture_rect(32,3,5)},
 		["Fuel"] = {texture = "guis/textures/pd2/pd2_waypoints", texture_rect = VoidUI_IB:get_texture_rect(32,4,4)},
 		["Tape_loop"] = {texture = "guis/textures/pd2/skilltree/icons_atlas", texture_rect = VoidUI_IB:get_texture_rect(64,5,3)},
+		["Explosives"] = {texture = "guis/textures/pd2/skilltree/icons_atlas", texture_rect = VoidUI_IB:get_texture_rect(64,5,7)},
 		["Upload"] = {texture = "guis/dlcs/big_bank/textures/pd2/pre_planning/preplan_icon_types", texture_rect = VoidUI_IB:get_texture_rect(48,8,5)},
 		["Analyze"] = {texture = "units/gui/gui_generic_search_df"},
 		["Breaching"] = {texture = "guis/dlcs/big_bank/textures/pd2/pre_planning/preplan_icon_types", texture_rect = VoidUI_IB:get_texture_rect(48,7,2)},

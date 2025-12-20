@@ -5,7 +5,9 @@
             "101033" : "Assemble"
         },
         "fex" : {
-            "153495" : "Hack"
+            "153495" : "Hack",
+            "138140" : "Explosives",
+            "156995" : "Helicopter"
         },
         "nmh" : {
             "104482" : ["Achievement","nmh_11"]
