@@ -80,6 +80,7 @@ Heist specific timers;
 - Power
 - Arrest cooldown
 - Elf
+- Explosives
 - Boat
 ### Skills and perkdecks
 - Total speed bonus
