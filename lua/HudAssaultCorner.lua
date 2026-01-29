@@ -109,7 +109,7 @@ end)
 function HUDAssaultCorner:add_custom_timer(data)
 	if not VoidUI_IB.options.timers or not VoidUIInfobox then return end
 	if VoidUIInfobox:child("cu_"..data.id) then return end --EXISTS!
-	if data and data.time and data.time <= 0 then return end
+	if not data or type(data.time) ~= "number" or data.time <= 0 then return end
 	TimerInfobox:new({
 		id = "cu_"..data.id,
 		name = data.name and data.name or data.id,
