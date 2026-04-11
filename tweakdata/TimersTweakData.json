@@ -76,7 +76,10 @@
         },
         "rat" : {
             "102230" : "RatVanFlee",
-            "102178" : "Helicopter"
+            "102178" : "Helicopter",
+			"102177" : "Helicopter",
+			"102166" : "Helicopter",
+			"102164" : "Helicopter"
         },
         "pent" : {
             "103868" : ["Achievement","pent_10"]
